@@ -1,0 +1,303 @@
+body {
+  background-color: #282929;
+  margin: 0;
+  color: white;
+  overflow-x: hidden;
+  font-family: "JetBrains Mono", monospace;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageIndicator {
+  position: absolute;
+  right: 1em;
+}
+
+.pageIndicator div {
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+.pageIndicator .actually {
+  background: linear-gradient(180deg, #ff5c00 0%, #c76b00 100%);
+}
+
+#page1 #left {
+  width: 27rem;
+  height: 27rem;
+  background: linear-gradient(180deg, #ff5c00 0%, #c76b00 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page1 #left .wrapper {
+  width: 25rem;
+  height: 25rem;
+  background-color: #282929;
+  padding: 0.4em;
+  padding-right: 1em;
+  padding-left: 1em;
+  font-size: 4em;
+  font-weight: 800;
+  text-align: right;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#page1 #left .project-number {
+  font-size: 0.5em;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+#page1 #left .number {
+  color: #ff5c00;
+}
+
+#page1 #right {
+  width: 38rem;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 800;
+  position: relative;
+  width: fit-content;
+  padding-right: 1em;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: #00000000;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+.desc {
+  color: #a7a7a7;
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.subjects {
+  margin-top: 1.4em;
+  font-size: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  color: #a7a7a7;
+}
+
+.subjects img {
+  width: 2.5em;
+}
+
+.subjects #diff {
+  line-height: 0.85em;
+}
+
+.subject {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5em;
+}
+
+.white-text {
+  color: white;
+  font-size: 1em;
+}
+
+.slide .header-wrapper {
+  width: 75vw;
+  margin-bottom: 3rem;
+}
+
+.slide .titleContainer {
+  display: inline-block;
+}
+
+.slide h1 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.typing-animation {
+  opacity: 1;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: solid #ff5c00 0.1em;
+  animation: typing 2s, cursor 0.4s step-end infinite alternate;
+}
+
+.politechnika-logo {
+  position: absolute;
+  bottom: 2rem;
+  right: 4rem;
+  display: flex;
+  align-items: end;
+  gap: 2em;
+  color: #a7a7a7;
+}
+
+.politechnika-logo img {
+  width: 5em;
+}
+
+#page1 {
+  flex-direction: row;
+}
+
+.slide {
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6em;
+}
+
+.orange-text {
+  color: #ff5c00;
+}
+
+.bold-text {
+  font-weight: 800;
+}
+
+.gray-text {
+  color: #a7a7a7;
+}
+
+.code {
+  line-height: 1.5em;
+}
+
+#page3 {
+  font-size: 1.5em;
+}
+
+.grandmasters ul {
+  list-style-type: none;
+  color: #ff5c00;
+}
+
+#page3 .right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 4rem;
+}
+
+#page3 .content {
+  gap: 4rem;
+}
+
+iframe {
+  width: 60vw;
+  height: 60vh;
+}
+
+#page4 {
+  justify-content: none;
+}
+
+#page5 {
+  font-size: 2em;
+}
+
+#page5 .left-content,
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+td {
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: right;
+  color: #a7a7a7;
+}
+
+#page5 .left-content img {
+  width: 35rem;
+}
+
+#page5 .title {
+  font-size: 1.5em;
+}
+
+#page6 ul {
+  list-style: none;
+}
+
+#page6 ul img {
+  width: 2em;
+}
+
+#page6 li {
+  width: 10vw;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+#page6 .left-content {
+  font-size: 1.8em;
+  width: 18vw;
+}
+
+#page6 table {
+  border: 4px solid #ff5c00;
+  border-collapse: collapse;
+}
+
+#page6 table tr td {
+  border-collapse: collapse;
+  border: 1px solid #ff5c00;
+  margin: 0;
+  padding: 1.2em;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+}
